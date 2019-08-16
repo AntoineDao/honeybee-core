@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>honeybee.shade module &#8212; honeybee 1.6.0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="honeybee.typing module" href="honeybee.typing.html" />
+    <link rel="prev" title="honeybee.room module" href="honeybee.room.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.6.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee.shade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.writer.html">honeybee.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee.shade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.writer.html">honeybee.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee.room.html" title="Previous Chapter: honeybee.room module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee.room module</span>
+    </a>
+  </li>
+  <li>
+    <a href="honeybee.typing.html" title="Next Chapter: honeybee.typing module"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">honeybee.typi... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee.shade.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">honeybee.shade module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.writer.html">honeybee.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="module-honeybee.shade">
+<span id="honeybee-shade-module"></span><h1>honeybee.shade module<a class="headerlink" href="#module-honeybee.shade" title="Permalink to this headline">¶</a></h1>
+<p>Honeybee Shade.</p>
+<dl class="class">
+<dt id="honeybee.shade.Shade">
+<em class="property">class </em><code class="descclassname">honeybee.shade.</code><code class="descname">Shade</code><span class="sig-paren">(</span><em>name</em>, <em>geometry</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">honeybee._base._Base</span></code></p>
+<p>A single planar shade.</p>
+<dl class="docutils">
+<dt>Properties:</dt>
+<dd>name
+display_name
+parent
+has_parent
+geometry
+vertices
+upper_left_vertices
+normal
+center
+area
+perimeter</dd>
+</dl>
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.area">
+<code class="descname">area</code><a class="headerlink" href="#honeybee.shade.Shade.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>The area of the shade.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.center">
+<code class="descname">center</code><a class="headerlink" href="#honeybee.shade.Shade.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ladybug_geometry Point3D for the center of the shade.</p>
+<p>Note that this is the center of the bounding rectangle around this geometry
+and not the area centroid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.check_non_zero">
+<code class="descname">check_non_zero</code><span class="sig-paren">(</span><em>tolerance=0.0001</em>, <em>raise_exception=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.check_non_zero"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.check_non_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the area of the Shade is above a certain “zero” tolerance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tolerance</strong> – The minimum acceptable area of the object. Default is 0.0001,
+which is equal to 1 cm2 when model units are meters. This is just
+above the smalest size that OpenStudio will accept.</li>
+<li><strong>raise_exception</strong> – If True, a ValueError will be raised if the object
+area is below the tolerance. Default: True.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.check_planar">
+<code class="descname">check_planar</code><span class="sig-paren">(</span><em>tolerance</em>, <em>raise_exception=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.check_planar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.check_planar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether all of the Shade’s vertices lie within the same plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>tolerance</strong> – The minimum distance between a given vertex and a the
+object’s’s plane at which the vertex is said to lie in the plane.</li>
+<li><strong>raise_exception</strong> – Boolean to note whether an ValueError should be
+raised if a vertex does not lie within the object’s plane.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.check_self_intersecting">
+<code class="descname">check_self_intersecting</code><span class="sig-paren">(</span><em>raise_exception=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.check_self_intersecting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.check_self_intersecting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the edges of the Shade intersect one another (like a bowtwie).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raise_exception</strong> – If True, a ValueError will be raised if the object
+intersects with itself. Default: True.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee.shade.Shade.from_dict">
+<em class="property">classmethod </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize an Shade from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – A dictionary representation of an Shade object.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="honeybee.shade.Shade.from_vertices">
+<em class="property">classmethod </em><code class="descname">from_vertices</code><span class="sig-paren">(</span><em>name</em>, <em>vertices</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.from_vertices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.from_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Shade from vertices with each vertex as an iterable of 3 floats.</p>
+<p>Note that this method is not recommended for a shade with one or more holes
+since the distinction between hole vertices and boundary vertices cannot
+be derived from a single list of vertices.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – Shade name.</li>
+<li><strong>vertices</strong> – A flattened list of 3 or more vertices as (x, y, z).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.geometry">
+<code class="descname">geometry</code><a class="headerlink" href="#honeybee.shade.Shade.geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ladybug_geometry Face3D object representing the Shade.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.has_parent">
+<code class="descname">has_parent</code><a class="headerlink" href="#honeybee.shade.Shade.has_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean noting whether this Shade has a parent Room.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>moving_vec</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move this Shade along a vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>moving_vec</strong> – A ladybug_geometry Vector3D with the direction and distance
+to move the face.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.normal">
+<code class="descname">normal</code><a class="headerlink" href="#honeybee.shade.Shade.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ladybug_geometry Vector3D for the direction the shade is pointing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.parent">
+<code class="descname">parent</code><a class="headerlink" href="#honeybee.shade.Shade.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent Room if assigned. None if not assigned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.perimeter">
+<code class="descname">perimeter</code><a class="headerlink" href="#honeybee.shade.Shade.perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The perimeter of the shade.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.reflect">
+<code class="descname">reflect</code><span class="sig-paren">(</span><em>plane</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.reflect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.reflect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reflect this Shade across a plane.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plane</strong> – A ladybug_geometry Plane across which the object will
+be reflected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>axis</em>, <em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate this Shade by a certain angle around an axis and origin.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>axis</strong> – A ladybug_geometry Vector3D axis representing the axis of rotation.</li>
+<li><strong>angle</strong> – An angle for rotation in degrees.</li>
+<li><strong>origin</strong> – A ladybug_geometry Point3D for the origin around which the
+object will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.rotate_xy">
+<code class="descname">rotate_xy</code><span class="sig-paren">(</span><em>angle</em>, <em>origin</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.rotate_xy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.rotate_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate this Shade counterclockwise in the world XY plane by a certain angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>angle</strong> – An angle in degrees.</li>
+<li><strong>origin</strong> – A ladybug_geometry Point3D for the origin around which the
+object will be rotated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.scale">
+<code class="descname">scale</code><span class="sig-paren">(</span><em>factor</em>, <em>origin=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale this Shade by a factor from an origin point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>factor</strong> – A number representing how much the object should be scaled.</li>
+<li><strong>origin</strong> – A ladybug_geometry Point3D representing the origin from which
+to scale. If None, it will be scaled from the World origin (0, 0, 0).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.to">
+<code class="descname">to</code><a class="headerlink" href="#honeybee.shade.Shade.to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shade writer object.</p>
+<p>Use this method to access Writer class to write the shade in different formats.</p>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd>shade.to.idf(shade) -&gt; idf string.
+shade.to.radiance(shade) -&gt; Radiance string.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="honeybee.shade.Shade.to_dict">
+<code class="descname">to_dict</code><span class="sig-paren">(</span><em>abridged=False</em>, <em>included_prop=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/shade.html#Shade.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.shade.Shade.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return Shade as a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>abridged</strong> – Boolean to note whether the extension properties of the
+object (ie. materials, transmittance schedule) should be included in
+detail (False) or just referenced by name (True). Default: False.</li>
+<li><strong>included_prop</strong> – List of properties to filter keys that must be included in
+output dictionary. For example [‘energy’] will include ‘energy’ key if
+available in properties to_dict. By default all the keys will be
+included. To exclude all the keys from extensions use an empty list.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.upper_left_vertices">
+<code class="descname">upper_left_vertices</code><a class="headerlink" href="#honeybee.shade.Shade.upper_left_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of vertices starting from the upper-left corner.</p>
+<p>This property should be used when exporting to EnergyPlus / OpenStudio.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="honeybee.shade.Shade.vertices">
+<code class="descname">vertices</code><a class="headerlink" href="#honeybee.shade.Shade.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of vertices for the shade (in counter-clockwise order).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
